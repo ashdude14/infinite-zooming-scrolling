@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import {
 Chart as ChartJS,
 LineElement,
@@ -9,7 +9,7 @@ TimeScale
  } from 'chart.js';
  import 'chartjs-adapter-date-fns';
 import { Line } from "react-chartjs-2";
-import {run} from './data.js';
+import { runTrip,runDistance} from './data.js';
 
 ChartJS.register(
   LineElement,
@@ -18,17 +18,25 @@ ChartJS.register(
   PointElement,
   Tooltip,
 );
-run();
-function App()
+ function App()
 {
+
+  const [trip, setTrip] = useState(
+    runTrip(100).then(res=>(setTrip(res)))
+  );
+  //console.log("trip_distance"+trip);
+  const [pickup, setPickup] = useState(
+    runDistance(100).then(res=>(setPickup(res)))
+  );
+ // console.log("hey ashhhhh " + trip);
   const data ={
-    labels: ['2022-11-01','2022-11-02','2022-11-03'], // pickup_datetime
+    labels: trip,//trip['dataset'], // pickup_datetime
     datasets : [
       {
-        data :[3,6,9,3.69], // trip_distance
+        data :pickup,// dist['dataset'], // trip_distance
         backgroundColor :'red',
         borderColor : 'black',
-        tension :'1'
+        tension :'000.1'
       }
     ]
   };
@@ -38,10 +46,10 @@ function App()
          type : 'time',
          time : {
           displayFormats: {
-            quarter: 'MMM YYYY'
+            quarter: 'MMM-YYYY'
         }
          },
-         min: '022-11-01 00:00:00'
+       //  min: '2009-01-01T00:00:00.000000Z' 
          
       },
       y : {
