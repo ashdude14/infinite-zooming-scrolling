@@ -1,6 +1,19 @@
-# Getting Started with Create React App
+# Problem Statement
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The details of the task are as follows:
+
+Implement a ZoomingAndScrolling chart with infinite scrolling capability.
+
+1. Set up a new project on CodeSandbox, using the template from the following link
+   https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/ZoomingAndScrolling/React/Light/
+
+2. populate the chart by retrieving the data from the "trips" table using HTTP rest API from https://demo.questdb.io/. x should be "pickup_datetime" and y should be "trip_distance"
+   https://questdb.io/docs/develop/query-data/#http-rest-api
+
+3. provide infinite scroll functionality for the graph chart; the concept of infinite refers to the ability to dynamically load new data as needed than loading all the data at once. Reference:
+   https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/LoadDataOnDemand/React/Light/
+
+
 
 ## Available Scripts
 
@@ -35,36 +48,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Steps 
+ 1. Get Data From https://demo.questdb.io/exec with REST API
+ 2. Set Chart Configuration
+ 3. Supply Data 
+ 4. Implement Infinite Zooming & Scrolling

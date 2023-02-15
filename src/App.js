@@ -22,11 +22,11 @@ ChartJS.register(
 {
 
   const [trip, setTrip] = useState(
-    runTrip(100).then(res=>(setTrip(res)))
+    runTrip(1000).then(res=>(setTrip(res)))
   );
   //console.log("trip_distance"+trip);
   const [pickup, setPickup] = useState(
-    runDistance(100).then(res=>(setPickup(res)))
+    runDistance(1000).then(res=>(setPickup(res)))
   );
  // console.log("hey ashhhhh " + trip);
   const data ={
@@ -49,7 +49,7 @@ ChartJS.register(
             quarter: 'MMM-YYYY'
         }
          },
-       //  min: '2009-01-01T00:00:00.000000Z' 
+        min: '2009-01-01T00:00:00.000000Z' 
          
       },
       y : {
