@@ -49,7 +49,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
 # Steps 
- 1. Get Data From https://demo.questdb.io/exec with REST API
- 2. Set Chart Configuration
- 3. Supply Data 
- 4. Implement Infinite Zooming & Scrolling
+ 1. Get Data From https://demo.questdb.io/exec with REST API --done
+ 2. Set Chart Configuration -- done
+ 3. Supply Data -- done
+ 4. Load Data On Demand ---to be implemented
+ 4. Implement Infinite Zooming & Scrolling --to be implemented
